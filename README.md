@@ -1,4 +1,4 @@
-https://github.com/username/posmotri-v-okno-ad
+https://github.com/Bardvioel/posmotri-v-okno-ad
 
 # Проект "Посмотри в окно"
 
