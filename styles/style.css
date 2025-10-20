@@ -51,8 +51,8 @@ video {
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   background-color: #1b1919;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
   margin: auto;
   font-size: 18px;
   inline-size: 1200px;
@@ -60,25 +60,29 @@ video {
 }
 
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 711px 1fr;
   gap: 30px;
   margin: 0 30px;
   inline-size: 100%;
+  align-items: end;
 }
 
 .result {
-  align-self: flex-end;
+  display: grid;
+  gap: 16px;
 }
 
 .result__video-container {
   position: relative;
-  inline-size: 711px;
-  margin: 0 0 11px;
+  inline-size: 100%;
+  block-size: 386px;
 }
 
 .search-form {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
   gap: 40px;
 }
 
@@ -123,7 +127,7 @@ video {
   color: currentColor;
   padding: 2px 0;
   background-color: transparent;
-  inline-size: 225px;
+  inline-size: 100%;
   border-top: 1px solid #FFF;
   border-right: none;
   border-bottom: 1px solid #FFF;
@@ -204,21 +208,30 @@ video {
 }
 
 .search-form__submit-button {
-  align-self: flex-end;
+  min-inline-size: 194px;
+  max-inline-size: 194px;
+}
+
+.more-button {
+  inline-size: 100%;
+  grid-column: 1 / -1;
 }
 
 .content__details {
-  inline-size: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 26px;
+  block-size: 100%;
 }
 
 .title {
   color: #FFF;
   text-transform: uppercase;
-  padding: 0 0 26px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
+  margin: 0;
 }
 
 .content__accent {
@@ -230,6 +243,9 @@ video {
   overflow-y: scroll;
   block-size: 298px;
   scrollbar-width: none;
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 34px;
 }
 
 .content__list::-webkit-scrollbar {
@@ -237,7 +253,7 @@ video {
 }
 
 .content__list-item:not(:last-child) {
-  margin: 0 0 34px;
+  margin: 0;
 }
 
 .content__card-link {
@@ -267,8 +283,10 @@ video {
 }
 
 .content__video-card {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px;
+  align-items: start;
 }
 
 .content__video-card-title {
